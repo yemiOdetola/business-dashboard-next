@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 import Link from "next/link";
 import Wrapper, { Count } from "./Badge.style";
@@ -25,7 +26,9 @@ const Badge = ({
     <Link href={path ? path : ""}>
       <Wrapper className="badge" style={style} onClick={onClick}>
         {icon}
-        <Count color={color && color}>{count}</Count>
+        <Count $color={color && color} $bgColor={bgColor && bgColor}>
+          {count}
+        </Count>
       </Wrapper>
     </Link>
   );
