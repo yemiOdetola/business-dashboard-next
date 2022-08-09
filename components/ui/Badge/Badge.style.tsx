@@ -14,8 +14,8 @@ export const Count = styled('span', (props: any) => ({
   minHeight: '14px',
   borderRadius: '50%',
   padding: '2px',
-  backgroundColor: props.bgColor
-    ? props.bgColor
+  backgroundColor: props.$bgColor
+    ? props.$bgColor
     : props.$theme.colors.primary,
   color: props.$color ? props.$color : props.$theme.colors.primaryB,
   fontSize: props.$theme.sizing.scale500,

@@ -5,11 +5,12 @@ import { Grid, Cell } from "baseui/layout-grid";
 import { Block } from "baseui/block";
 import { Card, StyledBody } from "baseui/card";
 import Head from "next/head";
+import Views from "containers/Widgets/Views";
 import { Container, ListGridCard, LabelGroup, WidgetCard } from "components/ui";
 import ProductViews from "containers/Widgets/ProductViews";
 import ProductsBar from "containers/Widgets/ProductsBar";
-import Views from "containers/Widgets/Views";
 import CashFlow from "containers/Widgets/CashFlow";
+import {productViews} from 'utils/data';
 
 const productsBarOptions = [
   {
@@ -26,96 +27,14 @@ const productsBarOptions = [
   },
 ];
 const Home: NextPage<{}> = () => {
-  // if (!data) return null;
-  // const { recentApps, productsBar, cashFlow } = data.dashboard;
-  const productViews = {
-		categories: [
-			'1',
-			'2',
-			'3',
-			'4',
-			'5',
-			'6',
-			'7',
-			'8',
-			'9',
-			'10',
-			'11',
-			'12',
-			'13',
-			'14',
-			'15',
-			'16',
-			'17',
-			'18',
-			'19',
-			'20',
-			'21',
-			'22',
-			'23',
-			'24',
-		],
-		products: [
-			160,
-			155,
-			141,
-			167,
-			122,
-			143,
-			113,
-			123,
-			120,
-			120,
-			120,
-			120,
-			160,
-			155,
-			141,
-			167,
-			122,
-			143,
-			113,
-			123,
-			130,
-			140,
-			120,
-			170,
-		],
-		views: [
-			140,
-			123,
-			120,
-			118,
-			113,
-			127,
-			144,
-			155,
-			141,
-			167,
-			122,
-			143,
-			140,
-			123,
-			120,
-			118,
-			113,
-			127,
-			144,
-			155,
-			141,
-			167,
-			122,
-			143,
-		],
-	}
   return (
     <Container>
       <Head>
-        <title> INST.</title>
+        <title>Sety Business dashbaord</title>
       </Head>
       <Block
         marginLeft={"-8px"}
-        marginRight={"8px"}
+        marginRight={"-8px"}
         paddingTop={["15px", "20px", "30px", "40px"]}
       >
         <Grid gridColumns={12} gridGutters={16} gridMargins={0}>
@@ -257,10 +176,9 @@ const Home: NextPage<{}> = () => {
               <StyledBody>
                 {/* <ProductsBar
                   className="padding-control"
-                  labels={productsBar.labels}
+                  labels={productsBar.label}
                   products={productsBar.products}
                 /> */}
-
                 <LabelGroup
                   style={{
                     position: "absolute",

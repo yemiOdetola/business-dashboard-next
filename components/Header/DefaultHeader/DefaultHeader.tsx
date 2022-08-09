@@ -15,7 +15,6 @@ import HeaderWrapper, {
 import avatar from '../../../assets/images/avatar.jpg';
 
 const DefaultHeader: React.FC<{}> = () => {
-  // const cartItems = useCartState('cartItems');
 
   return (
     <HeaderWrapper className="default">
@@ -36,7 +35,7 @@ const DefaultHeader: React.FC<{}> = () => {
               path="/shop/checkout"
               icon={
                 <SvgIcon
-                  src={require('../../../assets/images/cart-bag.svg?include')}
+                  src={require('../../../assets/images/cart-bag.svg')}
                 />
               }
               // count={cartItems.length}

@@ -1,14 +1,14 @@
 // @ts-nocheck
-import React from "react";
-import Link from "next/link";
-import Wrapper, { Count } from "./Badge.style";
+import React from 'react';
+import Link from 'next/link';
+import Wrapper, { Count } from './Badge.style';
 
 type BadgeProps = {
   path?: string;
   count: number;
   icon: React.ReactNode;
   color?: string;
-  bgColor?: React.ReactNode;
+  bgColor?: string;
   style?: React.CSSProperties;
   onClick?: () => void;
 };
@@ -23,7 +23,7 @@ const Badge = ({
   onClick,
 }: BadgeProps) => {
   return (
-    <Link href={path ? path : ""}>
+    <Link href={path ? path : ''}>
       <Wrapper className="badge" style={style} onClick={onClick}>
         {icon}
         <Count $color={color && color} $bgColor={bgColor && bgColor}>
