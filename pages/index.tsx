@@ -10,7 +10,7 @@ import { Container, ListGridCard, LabelGroup, WidgetCard } from "components/ui";
 import ProductViews from "containers/Widgets/ProductViews";
 import ProductsBar from "containers/Widgets/ProductsBar";
 import CashFlow from "containers/Widgets/CashFlow";
-import {productViews} from 'utils/data';
+import { productViews } from "utils/data";
 
 const productsBarOptions = [
   {
@@ -24,6 +24,45 @@ const productsBarOptions = [
   {
     color: "#0070F3",
     label: "Blueberry",
+  },
+];
+
+const homeWidgets: any = [
+  {
+    color: "#5341C4",
+    title: "210",
+    icon: <IoIosMailUnread color="#ffffff" size="1.7em" />,
+    description: "Unread Order Email",
+    btntext: "View report",
+    label: "Total mail",
+    onclick: console.log("View report of unread email."),
+  },
+  {
+    color: "#0070F3",
+    title: "198",
+    icon: <IoMdCart color="#ffffff" size="1.7em" />,
+    description: "Unread Order Email",
+    btntext: "View report",
+    label: "Total mail",
+    onclick: console.log("View report of unread email."),
+  },
+  {
+    color: "#3AA76D",
+    title: "210",
+    icon: <FaChartLine color="#ffffff" size="1.7em" />,
+    description: "Unread Order Email",
+    btntext: "View report",
+    label: "Total mail",
+    onclick: console.log("View report of unread email."),
+  },
+  {
+    color: "#f516c8",
+    title: "210",
+    icon: <FaMoneyCheckAlt color="#ffffff" size="1.7em" />,
+    description: "Unread Order Email",
+    btntext: "View report",
+    label: "Total mail",
+    onclick: console.log("View report of unread email."),
   },
 ];
 const Home: NextPage<{}> = () => {
@@ -40,53 +79,20 @@ const Home: NextPage<{}> = () => {
         <Grid gridColumns={12} gridGutters={16} gridMargins={0}>
           <Cell span={[12, 12, 6]}>
             <Grid gridColumns={12} gridGutters={16} gridMargins={0}>
-              <Cell span={[12, 6]}>
-                <WidgetCard
-                  style={{ marginBottom: "20px" }}
-                  title="210"
-                  icon={<IoIosMailUnread color="#ffffff" size="1.7em" />}
-                  description="Unread Order Email"
-                  btntext="View report"
-                  label="Total mail"
-                  onClick={() => console.log("View report of unread email.")}
-                />
-              </Cell>
-              <Cell span={[12, 6]}>
-                <WidgetCard
-                  style={{ marginBottom: "20px" }}
-                  color="#0070F3"
-                  title="198"
-                  icon={<IoMdCart color="#ffffff" size="1.7em" />}
-                  description="Pending Orders"
-                  btntext="View report"
-                  label="Total orders"
-                  onClick={() => console.log("View report of pending orders.")}
-                />
-              </Cell>
-              <Cell span={[12, 6]}>
-                <WidgetCard
-                  style={{ marginBottom: "20px" }}
-                  color="#3AA76D"
-                  title="$210M"
-                  icon={<FaChartLine color="#ffffff" size="1.6em" />}
-                  description="Yearly Income"
-                  btntext="View report"
-                  label="Yearly income"
-                  onClick={() => console.log("View report of yearly income.")}
-                />
-              </Cell>
-              <Cell span={[12, 6]}>
-                <WidgetCard
-                  style={{ marginBottom: "20px" }}
-                  color="#7928CA"
-                  title="$210M"
-                  icon={<FaMoneyCheckAlt color="#ffffff" size="1.6em" />}
-                  description="Total Spent"
-                  btntext="View report"
-                  label="Previous month"
-                  onClick={() => console.log("View report of previous month.")}
-                />
-              </Cell>
+              {homeWidgets.map((widget, index) => (
+                <Cell span={[12, 6]} key={index}>
+                  <WidgetCard
+                    style={{ marginBottom: "20px" }}
+                    color={widget.color}
+                    title={widget.title}
+                    icon={widget.icon}
+                    description={widget.description}
+                    btntext={widget.btntext}
+                    label={widget.label}
+                    onClick={widget.onclick}
+                  />
+                </Cell>
+              ))}
             </Grid>
           </Cell>
           <Cell span={[12, 12, 6]}>

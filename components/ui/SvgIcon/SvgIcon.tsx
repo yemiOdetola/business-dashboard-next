@@ -6,7 +6,6 @@ type SvgIconProps = {
 };
 
 const SvgIcon = ({ src, style }: SvgIconProps) => {
-  console.log(src.default, style);
   const source = src.default;
   return (
     <span style={style} className="svg-icon">

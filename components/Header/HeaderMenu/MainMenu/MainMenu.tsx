@@ -10,53 +10,23 @@ const menuItems = [
   },
   {
     id: 2,
-    label: 'Apps',
+    label: 'Incidents',
     path: '/apps',
   },
   {
     id: 3,
-    label: 'Shop',
+    label: 'Customers',
     path: '/shop',
   },
-  // {
-  //   id: 4,
-  //   label: 'Integrations',
-  //   path: '/integrations',
-  // },
   {
     id: 4,
-    label: 'Chat',
+    label: 'Billing',
     path: '/chat',
   },
   {
     id: 5,
-    label: 'Charts',
-    path: '/charts',
-  },
-  {
-    id: 6,
-    label: 'Forms',
-    path: '/forms',
-  },
-  {
-    id: 7,
-    label: 'UI Elements',
-    path: '/uielements',
-  },
-  {
-    id: 8,
-    label: 'Pricing',
-    path: '/pricing',
-  },
-  {
-    id: 9,
-    label: 'Profile',
-    path: '/profile',
-  },
-  {
-    id: 10,
     label: 'Settings',
-    path: '/settings',
+    path: '/charts',
   },
 ];
 

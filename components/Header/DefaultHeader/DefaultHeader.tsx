@@ -30,19 +30,8 @@ const DefaultHeader: React.FC<{}> = () => {
           />
           <MenuRight className="menu-right">
             <TopMenu />
-
-            <Badge
-              path="/shop/checkout"
-              icon={
-                <SvgIcon
-                  src={require('../../../assets/images/cart-bag.svg')}
-                />
-              }
-              // count={cartItems.length}
-              count={3}
-            />
             <AvatarMenu
-              name="Jane Doe"
+              name="Odetola Azeez"
               src={require('../../../assets/images/avatar.jpg')}
             />
           </MenuRight>
@@ -65,17 +54,8 @@ const DefaultHeader: React.FC<{}> = () => {
                 <MainMenu className="main-nav" />
               </NavLeft>
               <NavRight className="cart-and-avatar">
-                <Badge
-                  path="/shop/checkout"
-                  icon={
-                    <SvgIcon
-                      src={require('../../../assets/images/cart-bag.svg?include')}
-                    />
-                  }
-                  count={33}
-                />
                 <AvatarMenu
-                  name="Jane Doe"
+                  name="Odetola Azeez"
                   src={require('../../../assets/images/avatar.jpg')}
                 />
               </NavRight>

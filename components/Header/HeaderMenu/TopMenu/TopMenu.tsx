@@ -1,22 +1,17 @@
-import React from 'react';
-import Link from 'next/link';
-import Menu, { MenuItem, MenuLink } from './TopMenu.style';
+import React from "react";
+import Link from "next/link";
+import Menu, { MenuItem, MenuLink } from "./TopMenu.style";
 
-const menuItems = [
+const menuItems: any[] = [
   {
     id: 1,
-    label: 'Blog',
-    path: '#',
+    label: "About",
+    path: "https://sety.io/",
   },
   {
     id: 2,
-    label: 'Privacy',
-    path: '/privacy',
-  },
-  {
-    id: 3,
-    label: 'Terms',
-    path: '/terms',
+    label: "Documentation",
+    path: "https://documenter.getpostman.com/view/17334977/UVypzxYT#6863e612-eeef-44fb-aa42-7844a4d3c607",
   },
 ];
 
@@ -28,7 +23,7 @@ type MenuProps = {
 const TopMenu = ({ className, onClick }: MenuProps) => {
   return (
     <Menu className={className}>
-      {menuItems.map(item => (
+      {menuItems.map((item) => (
         <MenuItem key={`top-menu--item${item.id}`} onClick={onClick}>
           <Link href={item.path}>
             <MenuLink>{item.label}</MenuLink>

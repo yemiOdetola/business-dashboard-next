@@ -25,7 +25,7 @@ export const MenuItem = styled('li', ({ $theme }) => ({
 	},
 }));
 
-export const MenuLink = styled('a', ({ $theme }) => ({
+export const MenuLink = styled('div', ({ $theme }) => ({
 	display: 'inline-flex',
 	color: $theme.colors.contentSecondary,
 	textDecoration: 'none',
