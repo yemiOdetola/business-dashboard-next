@@ -11,22 +11,22 @@ const menuItems = [
   {
     id: 2,
     label: 'Incidents',
-    path: '/apps',
+    path: '/incidents',
   },
   {
     id: 3,
     label: 'Customers',
-    path: '/shop',
+    path: '/customers',
   },
   {
     id: 4,
     label: 'Billing',
-    path: '/chat',
+    path: '/billing',
   },
   {
     id: 5,
     label: 'Settings',
-    path: '/charts',
+    path: '/settings',
   },
 ];
 

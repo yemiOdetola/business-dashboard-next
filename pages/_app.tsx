@@ -12,7 +12,6 @@ import "react-flexbox-grid/dist/react-flexbox-grid.css";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function CustomApp({ Component, pageProps }: AppProps) {
-  // console.log("Component", Component);
   const [theme, setTheme] = useState(THEME.light);
   React.useEffect(() => {
     let SAVED_THEME = localStorage.getItem("theme");

@@ -82,6 +82,59 @@ export const productViews = {
 }
 
 export const productsBar = {
-    labels: ["Banana", "Oraneg", "Blueberry"],
-    products: products,
+    labels: ["Pending", "Resolved", "Cancelled"],
+    products: [18, 73, 9,]
 }
+
+export const tableSampleData = [
+    {
+      property: 'type',
+      description: 'set the card type, it should be default | gallery | video',
+      type: 'String',
+      default: '-',
+      version: '1.0',
+    },
+    {
+      property: 'image',
+      description:
+        'set the card image, see: <a target="_blank" href="https://nextjs.org/docs/api-reference/next/image">next/images</a> package for use',
+      type: 'object',
+      default: '-',
+      version: '',
+    },
+    {
+      property: 'numberOfView',
+      description: 'it will show if type is video',
+      type: 'String',
+      default: '-',
+      version: '',
+    },
+    {
+      property: 'numberOflike',
+      description: 'it will only show for gallery and post type',
+      type: 'String',
+      default: '-',
+      version: '',
+    },
+    {
+      property: 'numberOfcomment',
+      description: 'show number of comments on the post',
+      type: 'String',
+      default: '',
+      version: '',
+    },
+    {
+      property: 'onClick',
+      description: 'if you want to handle any event',
+      type: '(event) => void',
+      default: '-',
+      version: '',
+    },
+    {
+      property: 'style',
+      description: 'add your custom style',
+      type: 'React.CSSProperties',
+      default: '-',
+      version: '',
+    },
+  ];

@@ -44,7 +44,7 @@ const ProductViews = ({
       dataLabels: {
         enabled: false,
       },
-      colors: ['#3AA76D', '#EEEEEE'],
+      colors: ['#5341C4', '#EEEEEE'],
       xaxis: {
         type: 'category',
         categories,

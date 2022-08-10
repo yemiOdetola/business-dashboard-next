@@ -1,71 +1,76 @@
 import { NextPage } from "next";
-import { IoIosMailUnread, IoMdCart } from "react-icons/io";
-import { FaMoneyCheckAlt, FaChartLine } from "react-icons/fa";
+import {
+  FaUserCheck,
+  FaVestPatches,
+  FaUsersCog,
+  FaMoneyCheckAlt,
+} from "react-icons/fa";
 import { Grid, Cell } from "baseui/layout-grid";
 import { Block } from "baseui/block";
 import { Card, StyledBody } from "baseui/card";
 import Head from "next/head";
+import { useRouter } from 'next/router'
 import Views from "containers/Widgets/Views";
-import { Container, ListGridCard, LabelGroup, WidgetCard } from "components/ui";
+import { Container, LabelGroup, WidgetCard } from "components/ui";
 import ProductViews from "containers/Widgets/ProductViews";
 import ProductsBar from "containers/Widgets/ProductsBar";
-import CashFlow from "containers/Widgets/CashFlow";
-import { productViews } from "utils/data";
+import { productsBar, productViews } from "utils/data";
 
-const productsBarOptions = [
-  {
-    color: "#FF0080",
-    label: "Banana",
-  },
+const IncidentReportOptions = [
   {
     color: "#7928CA",
-    label: "Orange",
+    label: "Pending",
   },
   {
-    color: "#0070F3",
-    label: "Blueberry",
+    color: "#3aa76d",
+    label: "Resolved",
+  },
+  {
+    color: "#FF0080",
+    label: "Cancelled",
   },
 ];
-
 const homeWidgets: any = [
   {
     color: "#5341C4",
     title: "210",
-    icon: <IoIosMailUnread color="#ffffff" size="1.7em" />,
-    description: "Unread Order Email",
-    btntext: "View report",
-    label: "Total mail",
-    onclick: console.log("View report of unread email."),
+    icon: <FaUserCheck color="#ffffff" size="1.7em" />,
+    description: "Active customers",
+    btntext: "View Customers",
+    label: "",
+    onclick: () => console.log("View report of unread email."),
   },
   {
     color: "#0070F3",
     title: "198",
-    icon: <IoMdCart color="#ffffff" size="1.7em" />,
-    description: "Unread Order Email",
-    btntext: "View report",
-    label: "Total mail",
-    onclick: console.log("View report of unread email."),
+    icon: <FaVestPatches color="#ffffff" size="1.7em" />,
+    description: "Total Incidents",
+    btntext: "View Incidents",
+    label: "",
+    onclick: () => console.log("View report of unread email."),
   },
   {
     color: "#3AA76D",
     title: "210",
-    icon: <FaChartLine color="#ffffff" size="1.7em" />,
-    description: "Unread Order Email",
-    btntext: "View report",
-    label: "Total mail",
-    onclick: console.log("View report of unread email."),
+    icon: <FaUsersCog color="#ffffff" size="1.7em" />,
+    description: "Team Members",
+    btntext: "View team",
+    label: "",
+    onclick: () => console.log("View report of unread email."),
   },
   {
     color: "#f516c8",
-    title: "210",
+    title: "₦347k",
     icon: <FaMoneyCheckAlt color="#ffffff" size="1.7em" />,
-    description: "Unread Order Email",
+    description: "Avg. Monthly Income",
     btntext: "View report",
-    label: "Total mail",
-    onclick: console.log("View report of unread email."),
+    label: "",
+    onclick: () => console.table("Heyo!!!"),
   },
 ];
 const Home: NextPage<{}> = () => {
+  const router = useRouter();
+  console.log('router', router)
   return (
     <Container>
       <Head>
@@ -99,7 +104,7 @@ const Home: NextPage<{}> = () => {
             <Grid gridGutters={16} gridMargins={0}>
               <Cell span={12}>
                 <Card
-                  title="Product View"
+                  title="Registation stats"
                   overrides={{
                     Root: {
                       style: ({ $theme }) => {
@@ -147,7 +152,7 @@ const Home: NextPage<{}> = () => {
         <Grid gridColumns={12} gridGutters={16} gridMargins={0}>
           <Cell span={[12, 12, 4]}>
             <Card
-              title="Product List"
+              title="Incidents Resolution Stats"
               overrides={{
                 Root: {
                   style: ({ $theme }) => {
@@ -174,74 +179,32 @@ const Home: NextPage<{}> = () => {
                     return {
                       minHeight: "372px",
                       position: "relative",
+                      paddingTop: "20px",
                     };
                   },
                 },
               }}
             >
               <StyledBody>
-                {/* <ProductsBar
+                <ProductsBar
                   className="padding-control"
-                  labels={productsBar.label}
+                  labels={productsBar.labels}
                   products={productsBar.products}
-                /> */}
+                />
                 <LabelGroup
                   style={{
                     position: "absolute",
                     width: "100%",
-                    bottom: "-66px",
+                    bottom: "0",
                   }}
-                  items={productsBarOptions}
+                  items={IncidentReportOptions}
                 />
               </StyledBody>
             </Card>
           </Cell>
           <Cell span={[12, 12, 4]}>
             <Card
-              title="Recent apps"
-              overrides={{
-                Root: {
-                  style: ({ $theme }) => {
-                    return {
-                      borderTopColor: "transparent",
-                      borderRightColor: "transparent",
-                      borderBottomColor: "transparent",
-                      borderLeftColor: "transparent",
-                      boxShadow: $theme.lighting.shadow400,
-                      marginBottom: "10px",
-                      minHeight: "408px",
-                    };
-                  },
-                },
-                Title: {
-                  style: ({ $theme }) => {
-                    return {
-                      ...$theme.typography.font250,
-                    };
-                  },
-                },
-              }}
-            >
-              {/* <StyledBody>
-                {recentApps.map((item: any) => (
-                  <ListGridCard
-                    key={item.id}
-                    variant="list"
-                    thumb={item.image}
-                    title={item.name}
-                    description={item.description}
-                    style={{
-                      alignItems: "flex-start",
-                      marginTop: "25px",
-                    }}
-                  />
-                ))}
-              </StyledBody> */}
-            </Card>
-          </Cell>
-          <Cell span={[12, 12, 4]}>
-            <Card
-              title="Average View"
+              title="Outstanding Balance"
               overrides={{
                 Root: {
                   style: ({ $theme }) => {

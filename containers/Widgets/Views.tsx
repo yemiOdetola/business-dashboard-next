@@ -35,13 +35,13 @@ const Views = ({ className, totalView }: ViewsType) => {
             background: '#EEEEEE',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
-            dropShadow: {
-              enabled: true,
-              top: -3,
-              left: 0,
-              blur: 4,
-              opacity: 0.35,
-            },
+            // dropShadow: {
+            //   enabled: true,
+            //   top: -3,
+            //   left: 0,
+            //   blur: 4,
+            //   opacity: 0.35,
+            // },
           },
           dataLabels: {
             name: {
@@ -59,7 +59,7 @@ const Views = ({ className, totalView }: ViewsType) => {
         },
       },
       fill: {
-        colors: ['#7928CA'],
+        colors: ['#5341C4'],
       },
       stroke: {
         lineCap: 'round',

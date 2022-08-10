@@ -5,8 +5,8 @@ import Menu, { MenuItem, MenuLink } from "./TopMenu.style";
 const menuItems: any[] = [
   {
     id: 1,
-    label: "About",
-    path: "https://sety.io/",
+    label: "Need help?",
+    path: "mailto:help@sety.io",
   },
   {
     id: 2,

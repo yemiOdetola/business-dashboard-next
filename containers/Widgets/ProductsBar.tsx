@@ -11,15 +11,18 @@ const ProductsBar = ({ className, labels, products }: ProductsBarType) => {
   const [chartOptions, setChartOptions] = useState({
     options: {
       fill: {
-        colors: ['#0070F3', '#7928CA', '#FF0080'],
+        colors: ['#5341C4', '#3aa76d', '#FF0080']
       },
-      colors: ['#0070F3', '#7928CA', '#FF0080'],
+      colors: ['#5341C4', '#3aa76d', '#FF0080'],
       chart: {
         toolbar: {
           show: true,
         },
       },
       labels,
+      stroke: {
+        lineCap: 'round',
+      },
       dataLabels: {
         style: {
           fontSize: '30px',
