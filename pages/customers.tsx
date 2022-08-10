@@ -67,7 +67,7 @@ const Customers: NextPage<{}> = () => {
                   }}
                 >
                   <StyledTable $gridTemplateColumns="150px 250px auto auto auto">
-                    <StyledTableHeadAlt>Name</StyledTableHeadAlt>
+                    <StyledTableHeadAlt>User's Name</StyledTableHeadAlt>
                     <StyledTableHeadAlt>Phone number</StyledTableHeadAlt>
                     <StyledTableHeadAlt>Email</StyledTableHeadAlt>
                     <StyledTableHeadAlt>Status</StyledTableHeadAlt>

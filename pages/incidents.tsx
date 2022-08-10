@@ -67,7 +67,7 @@ const Incidents: NextPage<{}> = () => {
                   }}
                 >
                   <StyledTable $gridTemplateColumns="150px 250px auto auto auto">
-                    <StyledTableHeadAlt>Name</StyledTableHeadAlt>
+                    <StyledTableHeadAlt>User's Name</StyledTableHeadAlt>
                     <StyledTableHeadAlt>Email</StyledTableHeadAlt>
                     <StyledTableHeadAlt>Incident category</StyledTableHeadAlt>
                     <StyledTableHeadAlt>Status</StyledTableHeadAlt>
