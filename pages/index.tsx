@@ -63,7 +63,7 @@ const homeWidgets: any = [
     title: "₦347k",
     icon: <FaMoneyCheckAlt color="#ffffff" size="1.7em" />,
     description: "Avg. Monthly Income",
-    btntext: "View report",
+    btntext: "Generate report",
     label: "",
     onclick: () => console.table("Heyo!!!"),
   },
