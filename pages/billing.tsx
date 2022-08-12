@@ -68,11 +68,16 @@ const Billing: NextPage<{}> = () => {
                 >
                   Reported incidents by your customers/users
                 </Block>
-                <Block marginBottom="20px" marginTop="40px">
+                <Block marginBottom="40px" marginTop="20px">
                   <Grid gridColumns={12} gridGutters={16} gridMargins={0}>
                     <Cell span={[12, 12, 9]}>
                       <DivWrapper
-                        style={{ boxShadow: "0 1px 4px hsla(0, 0%, 0%, 0.10)" }}
+                        style={{
+                          minHeight: '160px',
+                          // boxShadow: "0 1px 4px hsla(0, 0%, 0%, 0.10)",
+                          border: '1px solid #eaeaea',
+                          borderRadius: '0.25rem'
+                        }}
                       >
                         <div style={{ paddingLeft: "1.25rem", flex: "0.5" }}>
                           <Paragraph>
