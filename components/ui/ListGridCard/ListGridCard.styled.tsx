@@ -23,10 +23,10 @@ export const Img = styled('img', (props: any) => ({
 
 export const Content = styled('div', {});
 
-export const Title = styled('h3', (props: any) => ({
+export const Title = styled('h1', (props: any) => ({
   fontWeight: 500,
   color: props.$theme.colors.primary,
-  fontSize: props.$variant === 'list' ? '14px' : '18px',
+  fontSize: props.$variant === 'list' ? '20px' : '24px',
   lineHeight: props.$variant === 'list' ? '18px' : '22px',
   marginBottom: props.$variant === 'list' ? '10px' : '20px',
 }));
