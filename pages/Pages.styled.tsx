@@ -23,15 +23,12 @@ export const SubSection = styled("div", (props: any) => ({
     ':hover': {
       opacity: 0.75,
     },
-    // borderLeftWidth: '1px',
-    // borderBottomLeftRadius: '2px',
-    // borderRightStyle: 'solid',
 }))
 
 export const SectionTitle = styled('h1', (props: any) => ({
-    fontWeight: 500,
+    fontWeight: 400,
     color: props.$theme.colors.primaryA,
-    fontSize: '20px',
+    fontSize: '28px',
     lineHeight: '18px',
     marginBottom:'10px',
   }));

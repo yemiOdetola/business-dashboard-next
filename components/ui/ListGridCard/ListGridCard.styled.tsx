@@ -26,7 +26,7 @@ export const Content = styled('div', {});
 export const Title = styled('h1', (props: any) => ({
   fontWeight: 500,
   color: props.$theme.colors.primary,
-  fontSize: props.$variant === 'list' ? '20px' : '24px',
+  fontSize: props.$variant === 'list' ? '24px' : '28px',
   lineHeight: props.$variant === 'list' ? '18px' : '22px',
   marginBottom: props.$variant === 'list' ? '10px' : '20px',
 }));

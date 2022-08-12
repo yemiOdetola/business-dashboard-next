@@ -63,14 +63,7 @@ const ListGridCard = ({
             title
           )}
         </Title>
-        <Paragraph $variant={variant}>
-          {description}{' '}
-          {author && (
-            <span>
-              Owned by <Link href={authorUrl}>{author}</Link>
-            </span>
-          )}
-        </Paragraph>
+        <Paragraph $variant={variant}> {description}{' '}</Paragraph>
         {btn && btn}
       </Content>
     </Wrapper>
