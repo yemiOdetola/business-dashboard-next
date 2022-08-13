@@ -18,7 +18,7 @@ const menuItems = [
 	{
 		id: 3,
 		label: 'Api Keys',
-		path: '/settings/api',
+		path: '/settings/apikeys',
 	},
 	{
 		id: 4,

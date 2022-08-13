@@ -5,7 +5,6 @@ export const DivWrapper = styled("div", (props: any) => ({
   justifyContent: "space-between",
   flexDirection: "row",
   alignItems: "center",
-  backgroundColor: props.$theme.colors.primaryB,
   overflow: "hidden",
 }));
 

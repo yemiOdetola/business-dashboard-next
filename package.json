@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.9.7",
     "apexcharts": "^3.35.4",
     "baseui": "^12.0.0",
     "date-arithmetic": "^4.1.0",
@@ -17,12 +18,14 @@
     "react-apexcharts": "^1.4.0",
     "react-dom": "18.2.0",
     "react-flexbox-grid": "^2.1.2",
+    "react-hook-form": "^7.34.1",
     "react-icons": "^4.4.0",
     "react-stickynode": "^4.1.0",
     "react-toastify": "^9.0.8",
     "styletron-engine-atomic": "^1.5.0",
     "styletron-engine-monolithic": "^1.0.0",
-    "styletron-react": "^6.1.0"
+    "styletron-react": "^6.1.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/date-arithmetic": "^4.1.1",
