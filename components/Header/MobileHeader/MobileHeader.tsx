@@ -66,7 +66,6 @@ const MobileHeader: React.FC<{}> = () => {
               style: ({ $theme }) => {
                 return {
                   fontSize: "22px",
-                  width: "104px",
                   justifyContent: "flex-start",
                   ":hover": {
                     backgroundColor: $theme.colors.primaryB,
