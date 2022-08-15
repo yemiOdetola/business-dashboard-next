@@ -89,16 +89,6 @@ const MobileHeader: React.FC<{}> = () => {
             Block: { style: { display: "flex", alignItems: "center" } },
           }}
         >
-          <Badge
-            path="/shop/checkout"
-            style={{ margin: "0 20px" }}
-            icon={
-              <SvgIcon
-                src={require("../../../assets/images/cart-bag.svg?include")}
-              />
-            }
-            count={4}
-          />
 
           <Button
             onClick={() => {

@@ -1,7 +1,36 @@
+@font-face {
+  font-family: 'Circular-Regular';
+  src: url('../fonts/circular-book.otf');
+}
+
+@font-face {
+  font-family: 'Circular-Medium';
+  src: url('../fonts/circular-medium.otf');
+}
+
+@font-face {
+  font-family: 'Circular-Bold';
+  src: url('../fonts/circular-bold.otf');
+}
+
+@font-face {
+  font-family: 'Circular-Black';
+  src: url('../fonts/circular-black.otf');
+}
+
+/* @import url('../fonts/circular-black-italic.otf');
+@import url('../fonts/circular-black.otf');
+@import url('../fonts/circular-bold.otf');
+@import url('../fonts/circular-book-italic.otf');
+@import url('../fonts/circular-book.otf');
+@import url('../fonts/circular-medium-italic.otf');
+@import url('../fonts/circular-medium.otf'); */
+
+
 body * {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue',
+  font-family: 'Circular-Regular', 'SF Pro Icons', 'Helvetica Neue',
     'Helvetica', 'Arial', 'Open Sans', sans-serif;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
@@ -14,6 +43,10 @@ body {
   font-size: 14px;
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Circular-Medium', sans-serif !important;
 }
 
 img {
