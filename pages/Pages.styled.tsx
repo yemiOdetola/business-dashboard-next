@@ -35,7 +35,7 @@ export const Label = styled("h4", (props: any) => ({
   color: props.$theme.colors.contentSecondary,
   fontSize: "16px",
   lineHeight: "22px",
-//   marginBottom: "0.25rem",
+  //   marginBottom: "0.25rem",
 }));
 
 export const SectionTitle = styled("h1", (props: any) => ({
@@ -46,10 +46,14 @@ export const SectionTitle = styled("h1", (props: any) => ({
   marginBottom: "10px",
 }));
 
-export const BorderedInfoList = styled('div', (props: any) => ({
-    borderLeftWidth: '2px',
-    padding: '0.25rem 0.5rem',
-    borderLeftColor: props.$theme.colors.borderOpaque,
-    borderLeftStyle: 'solid',
-    marginBottom: '1.5rem',
-  }));
+export const BorderedInfoList = styled("div", (props: any) => ({
+  borderLeftWidth: "2px",
+  padding: "0.25rem 0.5rem",
+  borderLeftColor: props.$theme.colors.borderOpaque,
+  borderLeftStyle: "solid",
+  marginBottom: "1.5rem",
+}));
+
+const Empty = styled('span', (props: any) => ({}))
+
+export default Empty;
